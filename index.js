@@ -453,7 +453,10 @@ async function transcribe_gspeech(file) {
 
   } catch (e) { console.log('transcribe_gspeech 368:' + e) }
 }
-
+client.user.setActivity("YOU", {
+  type: "LISTENING",
+  url: "https://open.spotify.com/track/0F3kMN9OPXr0b5metJq2M1?si=340601a9dc784137"
+});
 //////////////////////////////////////////
 //////////////////////////////////////////
 //////////////////////////////////////////
