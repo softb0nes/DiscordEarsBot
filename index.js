@@ -193,12 +193,12 @@ discordClient.on('message', async (msg) => {
         const mapKey = msg.guild.id;
         if (msg.content.trim().toLowerCase() == _CMD_JOIN) {
             if (!msg.member.voice.channelID) {
-                msg.reply('Error: please join a voice channel first.')
+                msg.reply('Error: please join a voice channel first idiot.')
             } else {
                 if (!guildMap.has(mapKey))
                     await connect(msg, mapKey)
                 else
-                    msg.reply('Already connected')
+                    msg.reply('Already connected, are you dumb?')
             }
         } else if (msg.content.trim().toLowerCase() == _CMD_LEAVE) {
             if (guildMap.has(mapKey)) {
@@ -209,7 +209,7 @@ discordClient.on('message', async (msg) => {
                     guildMap.delete(mapKey)
                 msg.reply("Disconnected.")
             } else {
-                msg.reply("Cannot leave because not connected.")
+                msg.reply("Cannot leave because not connected stupid.")
             }
         } else if (msg.content.trim().toLowerCase() == _CMD_HELP) {
             msg.reply(getHelpString());
@@ -453,10 +453,6 @@ async function transcribe_gspeech(file) {
 
   } catch (e) { console.log('transcribe_gspeech 368:' + e) }
 }
-client.user.setActivity("YOU", {
-  type: "LISTENING",
-  url: "https://open.spotify.com/track/0F3kMN9OPXr0b5metJq2M1?si=340601a9dc784137"
-});
 //////////////////////////////////////////
 //////////////////////////////////////////
 //////////////////////////////////////////
